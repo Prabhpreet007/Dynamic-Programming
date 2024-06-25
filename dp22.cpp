@@ -100,8 +100,8 @@ using namespace std;
 // }
 
 //TABULATION
-// T.C=
-// S.C=
+// T.C=O(N*T)
+// S.C=O(N*T)
 
     int findAns(int target,vector<int>& coins,vector<vector<int>>& dp){
 
@@ -143,6 +143,5 @@ using namespace std;
         vector<vector<int>>dp(n,vector<int>(amount+1,-1));
 
         cout<<findAns(amount,coins,dp);
-
 
 }
