@@ -74,26 +74,69 @@ using namespace std;
 // T.C=O(N*(N+1))
 // S.C=O(N*(N+1))
 
-int findAns(int n,vector<int>& price,vector<vector<int>>&dp){
+// int findAns(int n,vector<int>& price,vector<vector<int>>&dp){
 
+
+//     for(int i=0;i<=n;i++){
+//         dp[0][i]=price[0]*i;
+//     }
+
+//     for(int i=1;i<n;i++){
+//         for(int j=0;j<=n;j++){
+//             int take=INT_MIN;
+//             if(i+1<=j){
+//                 take=price[i]+dp[i][j-(i+1)];
+//             }
+//             int notTake=0+dp[i-1][j];
+//             dp[i][j]=max(take,notTake);
+//         }
+//     }
+
+    
+//     return dp[n-1][n];
+// }
+
+// int main(){
+// int n;
+// cin>>n;
+// vector<int>price(n);
+// for(int i=0;i<n;i++)
+// {
+//     cin>>price[i];
+// }
+    
+// vector<vector<int>>dp(n,vector<int>(n+1,0));
+
+// cout<<findAns(n,price,dp);
+//     return 0;
+// }
+
+
+//Space Opt
+// T.C=O(N*(N+1))
+// S.C=O(N+1)
+
+int findAns(int n,vector<int>& price,vector<vector<int>>&dp){
+vector<int>prev(n+1),curr(n+1);
 
     for(int i=0;i<=n;i++){
-        dp[0][i]=price[0]*i;
+        curr[i]=price[0]*i;
     }
 
     for(int i=1;i<n;i++){
         for(int j=0;j<=n;j++){
             int take=INT_MIN;
             if(i+1<=j){
-                take=price[i]+dp[i][j-(i+1)];
+                take=price[i]+curr[j-(i+1)];
             }
-            int notTake=0+dp[i-1][j];
-            dp[i][j]=max(take,notTake);
+            int notTake=0+prev[j];
+            curr[j]=max(take,notTake);
+            prev=curr;
         }
     }
 
     
-    return dp[n-1][n];
+    return prev[n];
 }
 
 int main(){
@@ -105,7 +148,7 @@ for(int i=0;i<n;i++)
     cin>>price[i];
 }
     
-vector<vector<int>>dp(n,vector<int>(n+1,-1));
+vector<vector<int>>dp(n,vector<int>(n+1,0));
 
 cout<<findAns(n,price,dp);
     return 0;
