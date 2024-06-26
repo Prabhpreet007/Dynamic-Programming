@@ -1,9 +1,14 @@
 // Unbounded Knapsack(CN)
 
+
 #include<iostream>
 #include<vector>
 #include<limits.h>
 using namespace std;
+
+// T.C = exponential
+// S.C = O(W)
+
 
 // int findAns(int i,int wt,vector<int> &profit, vector<int> &weight,int sum){
 //     if(wt==0)return sum;
@@ -46,6 +51,8 @@ using namespace std;
 
 // }
 
+// T.C = O(w) in worst case
+// S.C = O(n*w) + O(W)
 
 
 // int findAns(int i,int wt,vector<int> &profit, vector<int> &weight,vector<vector<int>>&dp){
@@ -87,6 +94,8 @@ using namespace std;
 
 
 // TABULATION
+// T.C = O(w) in worst case
+// S.C = O(n*w)+O(W)
 
 
 int findAns(int wt,vector<int> &profit, vector<int> &weight,vector<vector<int>>&dp){
