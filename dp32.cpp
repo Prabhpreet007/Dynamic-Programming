@@ -122,7 +122,7 @@ using namespace std;
 //T.C=O(n*m)
 //S.C=O(n*m)
 
-        int findAns(string &s,string &t,int n,int m,vector<vector<double>>&dp){
+int findAns(string &s,string &t,int n,int m,vector<vector<double>>&dp){
 
         for(int i=0;i<=m;i++){
             dp[0][i]=0;
