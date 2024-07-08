@@ -145,7 +145,8 @@ using namespace std;
 
 
 //SPACE OPTIMIZATION
-
+//T.C=O(N*2*3)
+//S.C=O(2*3)+O(2*3)
 
 
 int main(){
