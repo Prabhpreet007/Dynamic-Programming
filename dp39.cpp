@@ -105,3 +105,21 @@ int check=1;
 
     return 0;
 }
+
+
+// T.C = O(N)
+
+    int maxProfit(vector<int>& prices) {
+        int n=prices.size();
+        int i=0;
+        int check=1;
+
+        vector<vector<int>>dp (n+2,vector<int>(2,0));
+        for(int i=n-1;i>=0;i--){
+                    dp[i][1]=max(-prices[i]+dp[i+1][0],0+dp[i+1][1]);
+                
+                    dp[i][0]=max(+prices[i]+dp[i+2][1],0+dp[i+1][0]);
+            }
+        
+        return dp[0][check];
+    }
