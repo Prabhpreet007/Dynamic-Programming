@@ -96,8 +96,7 @@ int main(){
         int prevIndex=-1;
 
         vector<vector<int>>dp(n+1,vector<int>(n+1,0));
-        if(i>=nums.size())return 0;
-
+        
         for(int i=n-1;i>=0;i--){
             for(int prevIndex=-1;prevIndex<i;prevIndex++){
                 int ans=0;
