@@ -1,6 +1,8 @@
 // 368. Largest Divisible Subset (L.C)
 //  Divisible Set
 
+//T.C=O(N^2)
+
 vector<int> divisibleSet(vector<int> &nums)
 {
         
