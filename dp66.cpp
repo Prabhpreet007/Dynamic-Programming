@@ -1,5 +1,5 @@
 // 1911. Maximum Alternating Subsequence Sum
-
+// t.c=O(n*2)
 
 class Solution {
 public:
