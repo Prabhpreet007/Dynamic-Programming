@@ -1,6 +1,6 @@
 
 // 673. Number of Longest Increasing Subsequence(C.N & L.C)
-
+// good question do practice it once before interview
 // t.c=O(n^2)
 
     int findNumberOfLIS(vector<int>& nums) {

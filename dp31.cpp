@@ -32,11 +32,15 @@ string findAns(string &s1,string &s2){
             i--;j--;
         }
         else if(dp[i-1][j]>dp[i][j-1]){
-            ans+=s1[i-1];
+            ans+=s1[i-1];                      
+            //IMPORTANT isme ham yaha bhi add krte hain kyuni hame sirf common part hi ni blki dusra bhi part chihyea hota hai
+            // GOAL: Dono strings ka common + unique part ek hi string me banana.
             i--;
         }
         else{
             ans+=s2[j-1];
+            //IMPORTANT isme ham yaha bhi add krte hain kyuni hame sirf common part hi ni blki dusra bhi part chihyea hota hai
+            // GOAL: Dono strings ka common + unique part ek hi string me banana.
             j--;
         }
     }

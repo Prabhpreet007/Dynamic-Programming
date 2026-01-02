@@ -24,6 +24,7 @@
     static bool comp(string &s1,string &s2){
         return s1.length()<s2.length();
     }
+    
     int longestStrChain(vector<string>& words) {
         sort(words.begin(),words.end(),comp);
         int n=words.size();

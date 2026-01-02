@@ -3,14 +3,12 @@
 
 
 
-
 // New Solution
 
 class Solution {
 public:
 
     int findAns(int i,int j,vector<int>&nums,vector<vector<int>>& dp){
-
         if(i>j)return 0;
 
         if(dp[i][j]!=-1){
@@ -23,7 +21,6 @@ public:
             if(steps>maxi)maxi=steps;
         }
         return dp[i][j]= maxi;
-    
     }
 
     int maxCoins(vector<int>& nums) {

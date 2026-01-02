@@ -1,4 +1,5 @@
 //Count Partitions With Given Difference(CODING NINJAS)
+// GOOD QUESTION
 
 #include<iostream>
 #include<vector>

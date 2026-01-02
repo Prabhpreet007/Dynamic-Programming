@@ -58,6 +58,7 @@ using namespace std;
 // SC = O(n)+O(n*4)
 
 int findAns(int days,int last,vector<vector<int>> &points,vector<vector<int>>&dp){
+    
     if(days==0){
         int maxi=0;
         for(int i=0;i<3;i++){
