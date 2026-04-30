@@ -20,7 +20,6 @@ using namespace std;
 // right=Memoization(n-2,heights,dp)+abs(heights[n]-heights[n-2]);
 // }
 // return dp[n]=min(right,left);
-
 // }
 
 // int main(){

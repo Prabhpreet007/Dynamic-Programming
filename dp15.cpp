@@ -1,4 +1,4 @@
-// Array partition with minimum difference (CODING NINJAS)
+// Array partition with minimum difference (CODING NINJAS) GOOD QUESTION
 
 #include<iostream>
 #include<vector>

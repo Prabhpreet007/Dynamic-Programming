@@ -15,6 +15,7 @@ using namespace std;
         }
 
         for(int i=1;i<=i1;i++){
+            // make sure ki yaha pe <= hai 
             for(int j=1;j<=i2;j++){
                 if(s1[i-1]==s2[j-1]){
                      dp[i][j]= 1+dp[i-1][j-1];

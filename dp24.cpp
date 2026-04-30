@@ -1,4 +1,4 @@
-// Rod cutting problem(CN)
+// Rod cutting problem(CN) (GOOD QUESTION)
 
 #include<iostream>
 #include<vector>

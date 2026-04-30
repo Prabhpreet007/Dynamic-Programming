@@ -1,6 +1,22 @@
 //Count Partitions With Given Difference(CODING NINJAS)
 // GOOD QUESTION
 
+
+
+
+// 1.  S1 - S2 = D
+// 2.  S1 + S2 = totalSum
+
+// from eq 1    3.  S1=D+S2
+// put 3 in 2   4.  D+S2+S2=totalSum
+
+
+// from 4.
+// 2*S2 = totalSum-D
+// S2=(totalSum-D)/2
+// target = (totalSum-D)/2
+// target can't be odd kyuki /2 hai and array me int hai 
+
 #include<iostream>
 #include<vector>
 #include<limits.h>

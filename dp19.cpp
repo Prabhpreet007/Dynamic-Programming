@@ -111,9 +111,15 @@ int knapsack(vector<int> wt, vector<int> val, int n, int maxWeight)
 //IMPORTANT (MAKE SURE TO INITIALIZE THE DP ARRAY WITH 0)
 
 
+// it means ki agr mujhe allowed hai sirf first element lene ka toh mai max profit kaise nikal skta hu 
+// toh mujhe minimum wt[0] jitna bag ka maxWeight chihyea hoga first element ko condsider krne ke lea 
+// toh islyea hum shuru krenge wt[0] -> maxWeight and es window me hum 0th element consider kr skte hai
 	for(int i=wt[0];i<=maxWeight;i++){
 		dp[0][i]=val[0];
 	}
+	
+
+	// esme dp[2][3] ye btayega ki agr mai first 2 elements consider krta hu and maxWeight 3 hai toh max kitna profit ayega ye isme likha hoga
 
 	for(int i=1;i<n;i++){
 		for(int w=0;w<=maxWeight;w++){
@@ -123,7 +129,7 @@ int knapsack(vector<int> wt, vector<int> val, int n, int maxWeight)
 		}	
 		int notTake=0+dp[i-1][w];
 
-				dp[i][w]=max(take,notTake);
+		dp[i][w]=max(take,notTake);
 
 		}
 	}
